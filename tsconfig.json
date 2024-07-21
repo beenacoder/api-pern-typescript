@@ -8,7 +8,12 @@
         "esModuleInterop": true,
         "declaration": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "module": "es2022",
+        "moduleResolution": "Node",
+        "target":"ESNext"
     },
-    "include": ["./src/**/*.ts"],
+    "include": [
+        "./src/**/*.ts"
+    ],
 }
