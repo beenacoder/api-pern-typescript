@@ -15,5 +15,5 @@
     },
     "include": [
         "./src/**/*.ts"
-    ],
+, "src/__test__/server.test.ts"    ],
 }

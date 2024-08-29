@@ -9,7 +9,7 @@ async function  connectDB() {
     try {
         await db.authenticate();
         db.sync();
-        console.log("Base de datos conectada");
+        console.log("Base de datos conectada")
     } catch (error) {
         console.log("Error en la base de datos ", error);
     }
@@ -23,5 +23,9 @@ const server = express();
 server.use(express.json());
 
 server.use('/api/products', routers);
+
+server.get('/api', (req, res) => {
+    res.json({msg: 'Desde API'})
+})
 
 export default server;

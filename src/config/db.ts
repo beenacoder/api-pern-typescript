@@ -12,6 +12,7 @@ const __dirname = dirname(__fileName);
 
 const db = new Sequelize(process.env.DATABASE_URL!, {
     models:[join(__dirname + '/../models/**/*.model.ts')],
+    logging: false,
 });
 
 db.addModels([Product]);
