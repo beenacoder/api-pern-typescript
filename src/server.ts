@@ -1,4 +1,6 @@
 import express from 'express';
+import cors, {CorsOptions} from 'cors';
+import morgan from 'morgan';
 import routers from './routers';
 import db from './config/db';
 
@@ -17,10 +19,24 @@ async function  connectDB() {
 
 connectDB();
 
-
+//Instanciamos express
 const server = express();
 
+const corsOptions : CorsOptions = {
+    origin: (origin, callback) => {
+        if(origin === process.env.CLIENT_URL) {
+            callback(null, true)
+        } else {
+            callback(new Error('Error de CORS'))
+        }
+    }
+}
+server.use(cors(corsOptions));
+
+//Leer datos de formnularios
 server.use(express.json());
+
+server.use(morgan('dev'));
 
 server.use('/api/products', routers);
 

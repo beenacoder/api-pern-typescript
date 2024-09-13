@@ -22,7 +22,8 @@ export const getProducts = async (req: Request, res: Response) => {
                 ['id', 'DESC']
             ],
             attributes: {
-                exclude: ['createdAt', 'updatedAt', 'availability']
+                // exclude: ['createdAt', 'updatedAt', 'availability']
+                exclude: ['createdAt', 'updatedAt']
             }
         });
         if (!products) { res.status(404).send({ data: "No products found" }); }
@@ -46,7 +47,7 @@ export const getProductById = async (req: Request, res: Response) => {
 }
 
 //-------------------------------PUT/UPDATE /product
-//PUT reemplaza el registro con lo que le pasemos, es decir si solo le pasamos un solo campo lo demas los pasa en vacío.
+//PUT reemplaza/actualiza completamente el registro con lo que le pasemos, es decir si solo le pasamos un solo campo lo demas los pasa en vacío pero cambian todos los datos.
 //Por eso usamos product.update para protegernos y que se llenen todos los campos.
 export const updateProduct = async (req: Request, res: Response) => {
     const { id } = req.params;
@@ -62,6 +63,7 @@ export const updateProduct = async (req: Request, res: Response) => {
 }
 
 //-------------------------------PATCH /product
+//PATCH unicamente modifica/actualiza parcialmente, es decir solo cambia el campo en cuestion
 export const updateAvailability = async (req: Request, res: Response) => {
     const { id } = req.params;
     try {

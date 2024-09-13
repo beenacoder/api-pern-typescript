@@ -13,7 +13,6 @@
         "moduleResolution": "Node",
         "target":"ESNext"
     },
-    "include": [
-        "./src/**/*.ts"
-, "src/__test__/server.test.ts"    ],
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./src/**/*.test.ts"]
 }
