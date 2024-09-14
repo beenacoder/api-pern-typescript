@@ -1,7 +1,7 @@
 import express from 'express';
 import cors, {CorsOptions} from 'cors';
 import morgan from 'morgan';
-import routers from './routers';
+import routers from './routers.js';
 import db from './config/db';
 
 
