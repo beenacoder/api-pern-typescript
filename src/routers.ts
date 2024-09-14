@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { createProduct, deleteProduct, getProductById, getProducts, updateAvailability, updateProduct } from "./handlers/product";
+import { createProduct, deleteProduct, getProductById, getProducts, updateAvailability, updateProduct } from "./handlers/product.js";
 import { body, param } from "express-validator";
-import { handleInputErrors } from "./middlewares/errors";
+import { handleInputErrors } from "./middlewares/errors.js";
 
 const router = Router();
 
