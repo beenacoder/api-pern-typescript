@@ -9,8 +9,8 @@
         "declaration": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "module": "es2022",
-        "moduleResolution": "Node",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "target":"ESNext"
     },
     "ts-node": {
