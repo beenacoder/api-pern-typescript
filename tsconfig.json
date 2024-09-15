@@ -13,6 +13,9 @@
         "moduleResolution": "Node",
         "target":"ESNext"
     },
+    "ts-node": {
+        "esm": true
+    },
     "include": ["./src/**/*.ts"],
     "exclude": ["./src/**/*.test.ts"]
 }
