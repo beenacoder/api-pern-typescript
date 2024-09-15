@@ -1,0 +1,15 @@
+diff --git a/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize-service.js b/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize-service.js
+index f0dc5e2..1ebc652 100644
+--- a/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize-service.js
++++ b/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize-service.js
+@@ -1,7 +1,9 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.getModels = exports.prepareArgs = exports.prepareOptions = void 0;
+-const path_1 = require("path");
++// const path_1 = require("path");
++const path_1 = await import("path");
++
+ const glob = require("glob");
+ const array_1 = require("../../shared/array");
+ /**
